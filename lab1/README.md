@@ -38,6 +38,14 @@ dbutils.fs.mount(
   mount_point="/mnt/data",
   extra_configs = {"fs.azure.account.key.STORAGE_ACCOUNT_NAME.blob.core.windows.net": "ACCESS_KEY"}
 )
+
+# ready solution:
+dbutils.fs.mount(
+  source="wasbs://data@sannst01.blob.core.windows.net",
+  mount_point="/mnt/data",
+  extra_configs = {"fs.azure.account.key.sannst01.blob.core.windows.net": "S/xHWqim1DP/mVpixnosvXRwuYOZazG0YtYl3uNLzZlJp063YvWnAGfAA92bTjasTydhmyEkVgCd/AwC/uzvmg=="}
+)
+
 ```
 
 - STORAGE_ACCOUNT_NAME - name of your storage account
