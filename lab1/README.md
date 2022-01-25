@@ -30,7 +30,8 @@ In this task your are going to connect databricks to Azure Storage. You will als
 <img src="./img/newnotebook.png" />
 8. Give a name to your notebook, select Python as a language and choose your cluster (make sure the cluster is on).
 9. In the first cell past the following code (replace proper placeholders):
-10. 
+
+
 ```
 dbutils.fs.mount(
   source="wasbs://CONTAINER_NAME@STORAGE_ACCOUNT_NAME.blob.core.windows.net",
