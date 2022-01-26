@@ -119,7 +119,7 @@ dbutils.widgets.dropdown("country", "POL", countries_list)
 ```
 3. Now, create two charts with country filter. For example:
 ```
-new_cases = covid.where(df["iso_code"] == dbutils.widgets.get("country")) \
+new_cases = covid.where(covid["iso_code"] == dbutils.widgets.get("country")) \
     .select(["iso_code", "new_cases", "date"])
 display(new_cases)
 ```
