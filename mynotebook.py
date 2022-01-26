@@ -4,6 +4,10 @@
 
 # COMMAND ----------
 
+# Sample changes
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC ## Prerequisities:
 # MAGIC - Azure Data lake gen 2 created
@@ -310,4 +314,5 @@ new_greece_data.createOrReplaceTempView("new_greece_data")
 # MAGIC %sql select * from covid_data
 
 # COMMAND ----------
+
 
