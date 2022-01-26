@@ -30,13 +30,24 @@ In this task your are going to connect databricks to Azure Storage. You will als
 <img src="./img/newnotebook.png" />
 8. Give a name to your notebook, select Python as a language and choose your cluster (make sure the cluster is on).
 9. In the first cell past the following code (replace proper placeholders):
+
+
 ```
 dbutils.fs.mount(
   source="wasbs://CONTAINER_NAME@STORAGE_ACCOUNT_NAME.blob.core.windows.net",
   mount_point="/mnt/data",
   extra_configs = {"fs.azure.account.key.STORAGE_ACCOUNT_NAME.blob.core.windows.net": "ACCESS_KEY"}
 )
+
+# ready solution:
+dbutils.fs.mount(
+  source="wasbs://data@sannst01.blob.core.windows.net",
+  mount_point="/mnt/data",
+  extra_configs = {"fs.azure.account.key.sannst01.blob.core.windows.net": "S/xHWqim1DP/mVpixnosvXRwuYOZazG0YtYl3uNLzZlJp063YvWnAGfAA92bTjasTydhmyEkVgCd/AwC/uzvmg=="}
+)
+
 ```
+
 - STORAGE_ACCOUNT_NAME - name of your storage account
 - CONTAINER_NAME - name of the container created in point 3
 - ACCESS_KEY - azure storage access key obtained in point 5
